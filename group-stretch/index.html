@@ -136,7 +136,8 @@ function buildPrintPlan(){
   rows.push(row((i+1)+'. '+x.name,printBodyPart(x),timing,x.cue));
  });
  if(Number(state.closing)>0)rows.push(row('Closing','—',state.closing+' min',state.closingNotes));
- return `<p class="printCourse">EXS217 · Group Stretch Routine</p><h1>${esc(state.title||'My stretch routine')}</h1><p class="printMeta">${esc(state.name)}${state.name?' · ':''}${total} minutes</p><table class="routinePrint"><thead><tr><th scope="col" style="width:27%">Stretch / movement</th><th scope="col" style="width:20%">Body part</th><th scope="col" style="width:23%">Timing</th><th scope="col" style="width:30%">Cues</th></tr></thead><tbody>${rows.join('')}</tbody></table>`;
+ return `<h1>${esc(state.title||'My stretch routine')}</h1><p class="printCourse report-identifier" style="font:8.5pt/1.4 Arial,sans-serif;color:#59616c;margin:0 0 8px;break-after:avoid">EXS217 · Group Stretch Routine</p><p class="printMeta">${esc(state.name)}${state.name?' · ':''}${total} minutes</p><table class="routinePrint"><thead><tr><th scope="col" style="width:27%">Stretch / movement</th><th scope="col" style="width:20%">Body part</th><th scope="col" style="width:23%">Timing</th><th scope="col" style="width:30%">Cues</th></tr></thead><tbody>${rows.join('')}</tbody></table>`;
 }
 $('print').onclick=()=>{$('printout').innerHTML=buildPrintPlan();window.print()};guide();render();
-</script></html>
+</script><div class="mlj-resource-footer" role="contentinfo" aria-label="Resource information"><span>© 2026 Michelle L. Jung</span><span aria-hidden="true">·</span><a href="../licensing.html#development" data-resource-about>About this tool</a></div></html>
+
