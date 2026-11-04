@@ -14,8 +14,8 @@ const technique=active[0].id;
 const storage=()=>{const map=new Map<string,string>();return {getItem:(k:string)=>map.get(k)??null,setItem:(k:string,v:string)=>{map.set(k,v)},removeItem:(k:string)=>{map.delete(k)}}};
 
 test('the site opens directly to its own manual and has one linked competency route',()=>{
- assert.deepEqual(resolveCourseRoute('/'),{kind:'manual',course,path:'/'});
- assert.deepEqual(resolveCourseRoute('/competency/'),{kind:'tracker',course,path:'/competency/'});
+ assert.deepEqual(resolveCourseRoute('/'),{kind:'manual',course,path:'/stretch/'});
+ assert.deepEqual(resolveCourseRoute('/stretch/competency/'),{kind:'tracker',course,path:'/stretch/competency/'});
  assert.equal(resolveCourseRoute('/','?course='+other).course,course);
  assert.equal(resolveCourseRoute('/exs'+other+'/').kind,'unavailable');
  assert.equal(resolveCourseRoute('/exs'+other+'/manual/').kind,'unavailable');
@@ -26,7 +26,7 @@ test('catalogue, chapters, equipment and manual navigation are scoped to this co
  assert.ok(data.catalog.every(t=>t.course===course));assert.ok(data.chapters.every(c=>c.course===course));
  assert.ok(data.equipment.every(k=>k.startsWith('Theragun')===(course==='217')));
  const html=renderToStaticMarkup(<Manual course={course}/>);
- assert.ok(html.includes('Open competency tracker'));assert.ok(html.includes('href="/competency/"'));
+ assert.ok(html.includes('Open competency tracker'));assert.ok(html.includes('href="/stretch/competency/"'));
  assert.ok(!html.includes('Course selection'));assert.ok(!html.includes('EXS'+other));
  assert.equal(manualSelection(course,'?chapter=not-in-this-course').chapter.id,data.chapters[0].id);
  if(course==='215'){assert.equal(active.length,26);assert.equal(active.filter(t=>t.requiredDefault).length,26);assert.ok(!html.includes('Theragun'));}
@@ -63,9 +63,9 @@ test('the Canvas report stays course-specific and escapes student-entered text',
  assert.ok(html.includes('&lt;script&gt;bad&lt;/script&gt;'));
 });
 test('packaged pages contain only this course and forbid application data transmission',async()=>{
- const entries=await readdir('dist');assert.ok(entries.includes('competency'));assert.ok(entries.includes('exs'+course+'-photos'));
+ const entries=await readdir('../../stretch');assert.ok(entries.includes('competency'));assert.ok(entries.includes('exs'+course+'-photos'));
  assert.ok(!entries.includes('exs'+other+'-photos'));assert.ok(!entries.includes('exs'+other));
- for(const file of ['dist/index.html','dist/competency/index.html']){
+ for(const file of ['../../stretch/index.html','../../stretch/competency/index.html']){
   const html=await readFile(file,'utf8');assert.ok(html.includes('EXS'+course));assert.ok(!html.includes('EXS'+other));assert.ok(html.includes("connect-src 'none'"));assert.ok(html.includes("form-action 'none'"));
  }
  const meta=JSON.parse(await readFile('.sites-runtime/local-build-meta.json','utf8'));
@@ -81,7 +81,7 @@ test('every referenced course photo exists and has concise alternative text',asy
   assert.ok(source.includes('Triceps pad-location example.'));assert.ok(source.includes('Biceps pad-location example.'));assert.ok(source.includes('Lat wall-ball example.'));
  }else{
   const photos=JSON.parse(await readFile('lib/stretch-photos.json','utf8')) as Record<string,{src:string;alt:string}[]>;
-  for(const list of Object.values(photos))for(const photo of list){await readFile('public'+photo.src);assert.ok(photo.alt.length<=120);}
+  for(const list of Object.values(photos))for(const photo of list){await readFile('../..'+photo.src);assert.ok(photo.alt.length<=120);}
  }
 });
 
