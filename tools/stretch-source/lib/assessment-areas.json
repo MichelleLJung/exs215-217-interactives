@@ -1,0 +1,128 @@
+[
+  {
+    "id": "217-check-hamstrings",
+    "course": "217",
+    "name": "Hamstrings",
+    "chapter": "lower",
+    "section": "hamstrings",
+    "group": "Required stretch demonstrations",
+    "requiredDefault": true
+  },
+  {
+    "id": "217-check-quadriceps",
+    "course": "217",
+    "name": "Quadriceps",
+    "chapter": "lower",
+    "section": "quadriceps",
+    "group": "Required stretch demonstrations",
+    "requiredDefault": true
+  },
+  {
+    "id": "217-check-hip-flexors",
+    "course": "217",
+    "name": "Hip flexors",
+    "chapter": "lower",
+    "section": "hip-flexors",
+    "group": "Required stretch demonstrations",
+    "requiredDefault": true
+  },
+  {
+    "id": "217-check-glutes",
+    "course": "217",
+    "name": "Glutes / hip rotators",
+    "chapter": "lower",
+    "section": "glute-piriformis",
+    "group": "Required stretch demonstrations",
+    "requiredDefault": true
+  },
+  {
+    "id": "217-check-adductors",
+    "course": "217",
+    "name": "Adductors",
+    "chapter": "lower",
+    "section": "adductor",
+    "group": "Required stretch demonstrations",
+    "requiredDefault": true
+  },
+  {
+    "id": "217-check-calves",
+    "course": "217",
+    "name": "Calves: extended- and bent-knee applications",
+    "chapter": "lower",
+    "section": "calves",
+    "group": "Required stretch demonstrations",
+    "requiredDefault": true
+  },
+  {
+    "id": "217-check-chest",
+    "course": "217",
+    "name": "Chest / anterior shoulder",
+    "chapter": "upper",
+    "section": "pecs-anterior-shoulder",
+    "group": "Required stretch demonstrations",
+    "requiredDefault": true
+  },
+  {
+    "id": "217-check-posterior-shoulder",
+    "course": "217",
+    "name": "Posterior shoulder",
+    "chapter": "upper",
+    "section": "posterior-shoulder-and-capsule",
+    "group": "Required stretch demonstrations",
+    "requiredDefault": true
+  },
+  {
+    "id": "217-check-shoulder-rotation",
+    "course": "217",
+    "name": "Shoulder rotation",
+    "chapter": "upper",
+    "section": "shoulder-er-bias",
+    "group": "Required stretch demonstrations",
+    "requiredDefault": true
+  },
+  {
+    "id": "217-check-arms",
+    "course": "217",
+    "name": "Arms / forearms",
+    "chapter": "upper",
+    "section": "biceps",
+    "group": "Required stretch demonstrations",
+    "requiredDefault": true
+  },
+  {
+    "id": "217-check-neck",
+    "course": "217",
+    "name": "Neck / upper trapezius",
+    "chapter": "torso",
+    "section": "cervical-neck",
+    "group": "Required stretch demonstrations",
+    "requiredDefault": true
+  },
+  {
+    "id": "217-check-trunk",
+    "course": "217",
+    "name": "Trunk",
+    "chapter": "torso",
+    "section": "thoracic-rotation",
+    "group": "Required stretch demonstrations",
+    "requiredDefault": true
+  },
+  {
+    "id": "217-check-pnf",
+    "course": "217",
+    "name": "PNF: one approved lower-body demonstration",
+    "chapter": "start",
+    "section": "pnf",
+    "group": "Required stretch demonstrations",
+    "requiredDefault": true
+  },
+  {
+    "id": "217-check-adaptation",
+    "course": "217",
+    "name": "Adaptation: modify one demonstrated stretch",
+    "chapter": "start",
+    "section": "assessment",
+    "group": "Required stretch demonstrations",
+    "requiredDefault": true
+  }
+]

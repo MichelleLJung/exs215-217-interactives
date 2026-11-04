@@ -1,0 +1,34 @@
+{
+  "retired": [
+    "217-torso-assisted-thoracic-extension-over-support",
+    "217-torso-assisted-half-kneel-side-bend",
+    "217-torso-assisted-seated-lateral-flexion",
+    "217-torso-assisted-prone-sphinx-support",
+    "217-torso-assisted-half-kneel-gentle-backline-open",
+    "217-lower-hook-lying-assisted-butterfly",
+    "217-lower-side-lying-top-leg-drop-assisted",
+    "217-upper-assisted-horizontal-adduction-with-ir-bias",
+    "217-upper-assisted-er-at-90-90-if-cleared",
+    "217-upper-assisted-cross-body-long-head-bias",
+    "217-torso-assisted-supine-thoracic-rotation",
+    "217-upper-assisted-er-at-30-45-abduction",
+    "217-upper-assisted-ir-at-30-45-abduction",
+    "217-upper-assisted-shoulder-extension-with-elbow-extension-supinated",
+    "217-upper-assisted-shoulder-extension-with-neutral-grip",
+    "217-torso-assisted-seated-chest-opener"
+  ],
+  "consolidatedInto": {
+    "217-upper-assisted-er-at-30-45-abduction": "217-upper-external-rotation-lab-variation",
+    "217-upper-assisted-ir-at-30-45-abduction": "217-upper-internal-rotation-lab-variation",
+    "217-upper-assisted-shoulder-extension-with-elbow-extension-supinated": "217-upper-biceps-lab-variation",
+    "217-upper-assisted-shoulder-extension-with-neutral-grip": "217-upper-biceps-lab-variation",
+    "217-torso-assisted-seated-chest-opener": "217-upper-seated-pec-chest-alternate"
+  },
+  "descriptionOnly": [
+    "217-lower-bench-assisted-short-lever-hip-flexor",
+    "217-torso-assisted-overhead-side-reach",
+    "217-torso-assisted-side-lying-ql-lengthening",
+    "215-theragun",
+    "215-theragun-pro-plus"
+  ]
+}
